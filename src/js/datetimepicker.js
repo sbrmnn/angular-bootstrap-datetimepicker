@@ -108,7 +108,8 @@ angular.module('ui.bootstrap.datetimepicker', [])
         "</table></div>",
       scope: {
         ngModel: "=",
-        onSetTime: "="
+        onSetTime: "=",
+        status: "="
       },
       replace: true,
       link: function (scope, element, attrs) {
@@ -303,7 +304,7 @@ angular.module('ui.bootstrap.datetimepicker', [])
             var tempDate = new Date(unixDate);
             var newDate = new Date(tempDate.getTime() + (tempDate.getTimezoneOffset() * 60000));
             if (configuration.dropdownSelector) {
-              jQuery(configuration.dropdownSelector).dropdown('toggle');
+              scope.status.isopen = !scope.status.isopen;
             }
             if (angular.isFunction(scope.onSetTime)) {
               scope.onSetTime(newDate, scope.ngModel);

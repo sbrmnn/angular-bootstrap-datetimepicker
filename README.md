@@ -167,14 +167,14 @@ Display formatting of the date field is controlled by Angular filters.
 ### As a drop-down:
 
 ```html
-<div class="dropdown">
-    <a class="dropdown-toggle" id="dLabel" role="button" data-toggle="dropdown" data-target="#" href="">
-        Click here to show calendar
-    </a>
-    <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-        <datetimepicker data-ng-model="data.date"
-                        data-datetimepicker-config="{ dropdownSelector: '.dropdown-toggle' }"></datetimepicker>
-    </ul>
+<div class="btn-group" dropdown is-open="status.isopen">
+        <button type="button" class="btn btn-primary dropdown-toggle" ng-disabled="disabled">
+            {{data.date}} <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" role="menu">
+            <datetimepicker data-ng-model="data.date" data-status = "status"
+                            data-datetimepicker-config="{ dropdownSelector: '.dropdown-toggle' }"></datetimepicker>
+        </ul>
 </div>
 ```
 In this example, the drop-down functionality is controlled by Twitter Bootstrap.

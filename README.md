@@ -59,7 +59,7 @@ Add the css:
 Load the script files in your application:
 ```html
 <script type="text/javascript" src="components/moment/moment.js"></script>
-<script type="text/javascript" src="components/bootstrap/dist/js/bootstrap.js"></script>
+<script type="text/javascript" src="components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
 <script type="text/javascript" src="components/angular/angular.js"></script>
 <script type="text/javascript" src="components/angular-bootstrap-datetimepicker/src/js/datetimepicker.js"></script>
 ```
